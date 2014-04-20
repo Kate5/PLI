@@ -1,0 +1,108 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #404040;
+    background: #0ca3d2;
+}
+
+.container {
+    margin: 80px auto;
+    width: 60%;
+}
+
+.status {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    width: 100%;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.status h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+    background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px whitesmoke;
+}
+
+.about {
+    margin: 70px auto 40px;
+    padding: 8px;
+    width: 260px;
+    font: 10px/18px 'Lucida Grande', Arial, sans-serif;
+    color: #666;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+    background: #eee;
+    background: rgba(250, 250, 250, 0.8);
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.about a {
+    color: #333;
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-transition: background 0.1s;
+    -moz-transition: background 0.1s;
+    -o-transition: background 0.1s;
+    transition: background 0.1s;
+}
+
+.about a:hover {
+    text-decoration: none;
+    background: #fafafa;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.about-author {
+    margin-top: 5px;
+}
+
+.about-author > a {
+    padding: 1px 3px;
+    margin: 0 -1px;
+}
