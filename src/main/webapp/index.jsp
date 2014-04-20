@@ -12,7 +12,6 @@
     <script src="static/js/amcharts/serial.js" type="text/javascript"></script>
     <script src="static/js/amcharts/themes/light.js" type="text/javascript"></script>
     <script src="static/js/jquery-2.1.0.min.js" type="text/javascript"></script>
-    <script src="static/js/jquery-dateFormat.min.js" type="text/javascript"></script>
     <script src="static/js/client.js" type="text/javascript"></script>
 </head>
 <body>

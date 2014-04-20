@@ -15,7 +15,7 @@ function loadJavaIndex() {
                     });
                 });
 
-                var chart = AmCharts.makeChart("chartdiv_" + _l, {
+                AmCharts.makeChart("chartdiv_" + _l, {
                     "type": "serial",
                     "theme": "light",
                     "pathToImages": "/static/js/amcharts/images/",
@@ -50,16 +50,9 @@ function loadJavaIndex() {
                         "minorGridEnabled": true
                     }
                 });
-                chart.addListener("rendered", zoomChart);
             }
         });
     });
-}
-
-// this method is called when chart is first inited as we listen for "dataUpdated" event
-function zoomChart() {
-    // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
-    chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
 }
 
 $(document).ready(function () {
