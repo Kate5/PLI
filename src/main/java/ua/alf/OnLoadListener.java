@@ -5,6 +5,10 @@ import ua.alf.util.HibernateUtil;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Enumeration;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -26,11 +30,20 @@ public class OnLoadListener implements ServletContextListener {
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
         System.out.println("contextDestroyed");
-        try {
-            ThreadPoolManager.getInstance().shutdown();
-            HibernateUtil.shutdown();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+
+        ThreadPoolManager.getInstance().shutdown();
+        HibernateUtil.shutdown();
+
+        Enumeration<Driver> drivers = DriverManager.getDrivers();
+
+        while (drivers.hasMoreElements()) {
+            Driver driver = drivers.nextElement();
+            try {
+                DriverManager.deregisterDriver(driver);
+                System.out.println("Unregistered: " + driver.getClass());
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 

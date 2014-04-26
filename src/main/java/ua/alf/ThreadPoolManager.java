@@ -24,10 +24,14 @@ public class ThreadPoolManager {
         return scheduledExecutor.scheduleAtFixedRate(runnable, init, delay, timeUnit);
     }
 
-    public void shutdown() throws InterruptedException {
+    public void shutdown() {
         scheduledExecutor.purge();
         scheduledExecutor.shutdown();
-        scheduledExecutor.awaitTermination(1, TimeUnit.SECONDS);
+        try {
+            scheduledExecutor.awaitTermination(1, TimeUnit.SECONDS);
+        } catch (Exception ignored) {
+
+        }
     }
 
 }
